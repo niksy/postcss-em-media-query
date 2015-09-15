@@ -1,0 +1,41 @@
+{
+  "name": "postcss-em-media-query",
+  "version": "1.0.0",
+  "description": "PostCSS plugin for transforming min/max-width/height media queries to ems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "media",
+    "query",
+    "mq",
+    "em"
+  ],
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "postcss": "^5.0.5",
+    "postcss-value-parser": "^2.0.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-mocha": "^2.1.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/postcss-em-media-query.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/postcss-em-media-query/issues"
+  },
+  "homepage": "https://github.com/niksy/postcss-em-media-query#readme"
+}

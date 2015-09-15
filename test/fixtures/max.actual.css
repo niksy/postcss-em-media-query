@@ -1,0 +1,47 @@
+@media screen and (max-width:37.5em) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (max-width:2.625em) {
+	.bar {
+		color:green;
+	}
+}
+
+@media screen and (max-width:8em) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (max-height:37.5em) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (max-height:2.625em) {
+	.bar {
+		color:green;
+	}
+}
+
+@media screen and (max-height:8em) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (max-width:100vh) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (max-height:100%) {
+	.baz {
+		color:blue;
+	}
+}

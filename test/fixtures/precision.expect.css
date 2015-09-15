@@ -1,0 +1,47 @@
+@media screen and (min-width:37.5em) and (max-width:46.188em) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (min-width:2.625em) and (max-width:261.063em) {
+	.bar {
+		color:green;
+	}
+}
+
+@media screen and (min-width:8em) and (max-width:39.813em) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (min-height:37.5em) and (max-height:46.188em) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (min-height:2.625em) and (max-height:261.063em) {
+	.bar {
+		color:green;
+	}
+}
+
+@media screen and (min-height:8em) and (max-height:39.813em) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (min-width:100vh) and (max-width:100%) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (min-height:100vh) and (max-height:100%) {
+	.baz {
+		color:blue;
+	}
+}

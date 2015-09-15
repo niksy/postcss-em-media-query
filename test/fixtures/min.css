@@ -1,0 +1,47 @@
+@media screen and (min-width:600px) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (min-width:42px) {
+	.bar {
+		color:green;
+	}
+}
+
+@media screen and (min-width:128px) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (min-height:600px) {
+	.foo {
+		color:red;
+	}
+}
+
+@media screen and (min-height:42px) {
+	.bar {
+		color:green;
+	}
+}
+
+@media screen and (min-height:128px) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (min-width:100vh) {
+	.baz {
+		color:blue;
+	}
+}
+
+@media screen and (min-height:100%) {
+	.baz {
+		color:blue;
+	}
+}
