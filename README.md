@@ -1,6 +1,6 @@
-# PostCSS em media query [![Build Status][ci-img]][ci]
+# PostCSS em media query [![Build Status](https://travis-ci.org/niksy/postcss-em-media-query.svg)](https://travis-ci.org/niksy/postcss-em-media-query)
 
-[PostCSS] plugin for transforming min/max-width/height media queries to ems.
+[PostCSS](https://github.com/postcss/postcss) plugin for transforming min/max-width/height media queries to ems.
 
 ```css
 /* Before */
