@@ -1,6 +1,6 @@
 {
   "name": "postcss-em-media-query",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostCSS plugin for transforming min/max-width/height media queries to ems.",
   "main": "index.js",
   "scripts": {
