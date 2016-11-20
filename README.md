@@ -1,6 +1,25 @@
-# PostCSS em media query [![Build Status](https://travis-ci.org/niksy/postcss-em-media-query.svg)](https://travis-ci.org/niksy/postcss-em-media-query)
+# postcss-em-media-query
 
-[PostCSS](https://github.com/postcss/postcss) plugin for transforming min/max-width/height media queries to ems.
+[![Build Status][ci-img]][ci]
+
+[PostCSS][postcss] plugin for transforming min/max-width/height media queries to ems.
+
+## Install
+
+```sh
+npm install postcss-em-media-query --save
+```
+
+## Usage
+
+```js
+const postcss = require('postcss');
+const emMediaQuery = require('postcss-em-media-query');
+
+postcss([
+	emMediaQuery({ /* options */ })
+]);
+```
 
 ```css
 /* Before */
@@ -20,21 +39,9 @@
 }
 ```
 
-## Installation
-
-```sh
-npm install postcss-em-media-query --save-dev
-```
-
-## Usage
-
-```js
-postcss([ require('postcss-em-media-query')({ /* options */ }) ])
-```
-
 ## Options
 
-#### `precision`
+### `precision`
 
 Type: `Integer`  
 Default: `5`
@@ -44,3 +51,7 @@ Rounding precision for values.
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
+
+[ci]: https://travis-ci.org/niksy/postcss-em-media-query
+[ci-img]: https://img.shields.io/travis/niksy/postcss-em-media-query.svg
+[postcss]: https://github.com/postcss/postcss

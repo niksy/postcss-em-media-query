@@ -1,62 +1,48 @@
-/* jshint mocha:true  */
+const assert = require('assert');
+const fs = require('fs');
+const pify = require('pify');
+const postcss = require('postcss');
+const fn = require('../');
 
-var fs = require('fs');
-var path = require('path');
-var postcss = require('postcss');
-var assert = require('assert');
-var plugin = require('../');
-
-function test ( name, opts, done ) {
-	var fixtureDir = './test/fixtures/';
-	var baseName   = name.split(':')[0];
-	var testName   = name.split(':').join('.');
-	var inputPath  = path.resolve(fixtureDir + baseName + '.css');
-	var actualPath = path.resolve(fixtureDir + testName + '.actual.css');
-	var expectPath = path.resolve(fixtureDir + testName + '.expect.css');
-
-	var inputCSS  = fs.readFileSync(inputPath, 'utf8');
-	var expectCSS = fs.readFileSync(expectPath, 'utf8');
-
-	postcss([plugin(opts)]).process(inputCSS, {
-		from: inputPath
-	}).then(function (result) {
-		var actualCSS = result.css;
-
-		fs.writeFileSync(actualPath, actualCSS);
-
-		assert.equal(actualCSS, expectCSS);
-		assert.equal(result.warnings().length, 0);
-
-		done();
-	}).catch(function (error) {
-		done(error);
-	});
+function runPostcss ( file, opts ) {
+	return pify(fs.readFile)(file, 'utf8')
+		.then(( css ) => {
+			return postcss([
+				fn(opts)
+			]).process(css);
+		});
 }
 
-describe('postcss-em-media-query', function () {
+function runTest ( testCase, opts ) {
+	return Promise.all([
+		pify(fs.readFile)(`./test/fixtures/${testCase}.expected.css`, 'utf8'),
+		runPostcss(`./test/fixtures/${testCase}.css`, opts)
+	])
+			.then(( res ) => {
+				assert.equal(res[0].trim(), res[1].css.trim());
+			});
+}
 
-	it('screen and (min-{width/height}:{value})', function ( done ) {
-		test('min', {}, done);
-	});
+it('screen and (min-{width/height}:{value})', function () {
+	return runTest('min', {});
+});
 
-	it('screen and (max-{width/height}:{value})', function ( done ) {
-		test('max', {}, done);
-	});
+it('screen and (max-{width/height}:{value})', function () {
+	return runTest('max', {});
+});
 
-	it('screen and (min-{width/height}:{value}), screen and (min-{width/height}:{value})', function ( done ) {
-		test('min-multiple', {}, done);
-	});
+it('screen and (min-{width/height}:{value}), screen and (min-{width/height}:{value})', function () {
+	return runTest('min-multiple', {});
+});
 
-	it('(min-{width/height}:{value}), screen and (min-{width/height}:{value}) / screen and (min-{width/height}:{value}), (min-{width/height}:{value})', function ( done ) {
-		test('min-combination', {}, done);
-	});
+it('(min-{width/height}:{value}), screen and (min-{width/height}:{value}) / screen and (min-{width/height}:{value}), (min-{width/height}:{value})', function () {
+	return runTest('min-combination', {});
+});
 
-	it('screen and (min-{width/height}:{value}) and (max-{width/height}:{value})', function ( done ) {
-		test('min-max', {}, done);
-	});
+it('screen and (min-{width/height}:{value}) and (max-{width/height}:{value})', function () {
+	return runTest('min-max', {});
+});
 
-	it('precision: 3', function ( done ) {
-		test('precision', { precision: 3 }, done);
-	});
-
+it('precision: 3', function () {
+	return runTest('precision', { precision: 3 });
 });
