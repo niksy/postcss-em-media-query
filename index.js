@@ -1,14 +1,14 @@
-'use strict';
+import emMediaQuery from 'em-media-query';
 
-const postcss = require('postcss');
-const emMediaQuery = require('em-media-query');
-
-module.exports = postcss.plugin('postcss-em-media-query', ( opts ) => {
-	return ( css ) => {
-		css.walkAtRules(( rule ) => {
-			if ( rule.name === 'media' ) {
-				rule.params = emMediaQuery(rule.params, opts);
+export default (options) => {
+	return {
+		postcssPlugin: 'postcss-em-media-query',
+		AtRule: {
+			media: (rule) => {
+				rule.params = emMediaQuery(rule.params, options);
 			}
-		});
+		}
 	};
-});
+};
+
+export const postcss = true;

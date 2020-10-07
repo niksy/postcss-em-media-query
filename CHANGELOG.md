@@ -4,4 +4,4 @@
 
 ### Added
 
--   Initial implementation
+-   Support for PostCSS 8

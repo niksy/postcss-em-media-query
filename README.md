@@ -8,14 +8,14 @@ ems.
 ## Install
 
 ```sh
-npm install postcss-em-media-query --save
+npm install postcss postcss-em-media-query --save
 ```
 
 ## Usage
 
 ```js
-const postcss = require('postcss');
-const emMediaQuery = require('postcss-em-media-query');
+import postcss from 'postcss';
+import emMediaQuery from 'postcss-em-media-query';
 
 postcss([
 	emMediaQuery({

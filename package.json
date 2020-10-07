@@ -28,8 +28,7 @@
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "dependencies": {
-    "em-media-query": "^1.0.0",
-    "postcss": "^5.0.5"
+    "em-media-query": "^1.0.0"
   },
   "devDependencies": {
     "changelog-verify": "^1.1.2",
@@ -51,10 +50,13 @@
     "mocha": "^4.1.0",
     "np": "^3.0.4",
     "nyc": "^12.0.2",
-    "pify": "^2.3.0",
+    "postcss": "^8.1.1",
     "prettier": "^1.17.0",
     "rollup": "^1.0.0",
     "version-changelog": "^3.1.1"
+  },
+  "peerDependencies": {
+    "postcss": "^8.1.1"
   },
   "engines": {
     "node": ">=12"
