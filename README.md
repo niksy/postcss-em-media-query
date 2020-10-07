@@ -2,7 +2,8 @@
 
 [![Build Status][ci-img]][ci]
 
-[PostCSS][postcss] plugin for transforming min/max-width/height media queries to ems.
+[PostCSS][postcss] plugin for transforming min/max-width/height media queries to
+ems.
 
 ## Install
 
@@ -17,24 +18,26 @@ const postcss = require('postcss');
 const emMediaQuery = require('postcss-em-media-query');
 
 postcss([
-	emMediaQuery({ /* options */ })
+	emMediaQuery({
+		/* options */
+	})
 ]);
 ```
 
 ```css
 /* Before */
 
-@media screen and (min-width:600px) and (max-width:739px) {
+@media screen and (min-width: 600px) and (max-width: 739px) {
 	.foo {
-		color:red;
+		color: red;
 	}
 }
 
 /* After */
 
-@media screen and (min-width:37.5em) and (max-width:46.1875em) {
+@media screen and (min-width: 37.5em) and (max-width: 46.1875em) {
 	.foo {
-		color:red;
+		color: red;
 	}
 }
 ```
@@ -52,6 +55,9 @@ Rounding precision for values.
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
 
-[ci]: https://travis-ci.org/niksy/postcss-em-media-query
-[ci-img]: https://img.shields.io/travis/niksy/postcss-em-media-query.svg
-[postcss]: https://github.com/postcss/postcss
+<!-- prettier-ignore-start -->
+
+[ci]: https://travis-ci.com/niksy/postcss-em-media-query
+[ci-img]: https://travis-ci.com/niksy/postcss-em-media-query.svg?branch=master
+
+<!-- prettier-ignore-end -->

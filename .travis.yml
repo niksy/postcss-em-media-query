@@ -1,6 +1,3 @@
 language: node_js
 node_js:
-  - '4'
-branches:
-  only:
-    - /^v[0-9]/
+  - '12'

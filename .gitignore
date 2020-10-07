@@ -1,5 +1,11 @@
 .DS_Store
 node_modules/
+package-lock.json
+yarn.lock
 npm-debug.log
 .nyc_output/
 coverage/
+index.cjs.js
+index.esm.js
+index.cjs.js.map
+index.esm.js.map
