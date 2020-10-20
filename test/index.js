@@ -5,7 +5,8 @@ import fn from '../index';
 
 async function runPostcss(file, options) {
 	const css = await fs.readFile(file, 'utf8');
-	return postcss([fn(options)]).process(css);
+	/* eslint-disable no-undefined */
+	return postcss([fn(options)]).process(css, { from: undefined });
 }
 
 async function runTest(testCase, options) {

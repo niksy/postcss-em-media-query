@@ -2,6 +2,11 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Properly export plugin function
+    ([reference](https://github.com/postcss/postcss/issues/1441))
+
 ## [3.0.0][] - 2020-10-07
 
 ### Added

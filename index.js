@@ -1,6 +1,6 @@
 import emMediaQuery from 'em-media-query';
 
-export default (options) => {
+const plugin = (options) => {
 	return {
 		postcssPlugin: 'postcss-em-media-query',
 		AtRule: {
@@ -10,5 +10,6 @@ export default (options) => {
 		}
 	};
 };
+plugin.postcss = true;
 
-export const postcss = true;
+export default plugin;
