@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Upgrade em-media-query (Closes #3)
+
 ## [4.0.0][] - 2020-10-20
 
 ### Changed
