@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [4.1.0][] - 2020-10-21
+
 ### Changed
 
 -   Upgrade em-media-query (Closes #3)
@@ -25,3 +27,6 @@
 [unreleased]:
 	https://github.com/niksy/postcss-em-media-query/compare/v4.0.0...HEAD
 [4.0.0]: https://github.com/niksy/postcss-em-media-query/tree/v4.0.0
+[unreleased]:
+	https://github.com/niksy/postcss-em-media-query/compare/v4.1.0...HEAD
+[4.1.0]: https://github.com/niksy/postcss-em-media-query/tree/v4.1.0
