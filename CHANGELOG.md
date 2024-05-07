@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [4.1.1][] - 2024-05-07
+
 ### Fixed
 
 -   Prevent possible infinite loops when processing nodes
@@ -34,3 +36,6 @@
 [unreleased]:
 	https://github.com/niksy/postcss-em-media-query/compare/v4.1.0...HEAD
 [4.1.0]: https://github.com/niksy/postcss-em-media-query/tree/v4.1.0
+[unreleased]:
+	https://github.com/niksy/postcss-em-media-query/compare/v4.1.1...HEAD
+[4.1.1]: https://github.com/niksy/postcss-em-media-query/tree/v4.1.1
