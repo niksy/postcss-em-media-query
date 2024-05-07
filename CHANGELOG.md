@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Fixed
+
+-   Prevent possible infinite loops when processing nodes
+
 ## [4.1.0][] - 2020-10-21
 
 ### Changed
